@@ -1,8 +1,0 @@
-{
-    "name": "daisy",
-    "version": "0.0.1",
-    "dependencies": {
-        "oauth": "0.9.0",
-        "sqlite": "1.0.4"
-    }
-}
