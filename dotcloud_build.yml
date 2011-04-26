@@ -1,0 +1,4 @@
+daisy:
+  requirements:
+    - oauth
+    - sqlite
