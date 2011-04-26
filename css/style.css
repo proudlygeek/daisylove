@@ -33,18 +33,28 @@ body {
     background-color: #CCDDEE;
 }
 
-#title {
+#central_block {
     position: absolute;
-    //width: 755px;
-    top: 0;
+    /* top: 50%;
+    /*left: 50%;
+    margin-left: -98px;
+    margin-top: 50px; */
     left: 50%;
-    margin-left: -362px;
-    font-size: 24px;
+    top: 50%;
+    width: 340px;
+    height: 170px;
+    margin-top: -85px;
+    margin-left: -170px;
+}
+
+#title {
+    /* width: 228px; */
+    font-size: 36px;
+    text-align: center;
 }
 
 #title h1 {
-    margin-top: 0;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 
@@ -70,22 +80,56 @@ body {
 }
 
 
-#again {
+.button {
     display: none;
     position: absolute;
-    background-color: #FFF;
-    bottom: 50px;
+    width: 190px;
+    bottom: 100px;
     left: 50%;
-    margin-left: -85px;
+    margin-left: -78px;
+}
+
+.button p {
+    padding: 15px 0;
     border-radius: 5px;
+    text-align: center;
+    border: 1px solid #DADADA;
+    background-color: #FFF;
+    -webkit-box-shadow: 1px 1px 2px #7D6F60;
+    -moz-box-shadow: 1px 1px 2px #7D6F60;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
 }
 
-#again:hover {
-    background-color: #B3D3B7;
+.button p:hover {
     cursor: pointer;
+    border: 1px solid #888F95;
+    color: #FFF;
+    text-shadow: 1px 1px 2px #777;
+    background: #B3D3B7; /* old browsers */
+    background: -moz-linear-gradient(top, #B3D3B7 0%, #95A8AE 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#B3D3B7), color-stop(100%,#95A8AE)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B3D3B7', endColorstr='#95A8AE',GradientType=0 ); /* ie */
 }
 
-#again p {
-    font-size: 18px;
-    padding: 0 20px;
+.button p {
+    font-size: 20px;
+}
+
+#input-name {
+  display: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#input-name input {
+  font: 24px "FontinSansRegular", Arial, sans-serif;
+  padding: 10px 20px;
+  width: 228px;
+}
+
+#share {
+  position: absolute
+  display: none;
 }
