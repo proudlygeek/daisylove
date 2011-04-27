@@ -132,13 +132,13 @@ function draw_daisy(petals, sex, name) {
 
                                                         params = {
                                                             'app_id': 181984455187210,
-                                                            'redirect_uri': "http://127.0.0.1:8080",
                                                             'message': message,
+                                                            'link': "http://proudlygeek.github.com/daisylove/",
                                                             'caption': "A simple (but effective) love test",
-                                                            'link': "http://127.0.0.1:8080",
                                                             'description': "Share the love of your life on Facebook!",
                                                             'picture': "http://i.imgur.com/NkXUS.png",
-                                                            'name': "Loves me, Loves me Not"
+                                                            'name': "Loves me, Loves me Not",
+                                                            'redirect_uri': "http://proudlygeek.github.com/daisylove/"
                                                         };
                                                     }
                                                     window.location.replace(stringify(base_uri, params));
