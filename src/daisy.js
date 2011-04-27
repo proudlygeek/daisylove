@@ -104,34 +104,33 @@ function draw_daisy(petals, sex, name) {
                                     $(div).fadeIn(500).each(function() {
                                         var message = 'I\'ve just discovered that ' + name + ' Loves me on http://daisy.no.de';
                                         $(this).find('p').click(function() {
-                                                if (div === '#share') {
-                                                    if ($(this).hasClass('twitter_share')) {
+                                                var stringify = function(baseUri, jsonItem) {
+                                                    var uri = [baseUri];
 
-                                                            $.ajax({
-                                                                type: "POST",
-                                                                url: "/twitter_share",
-                                                                data: {
-                                                                    'message': message,
-                                                                    'petals': petals,
-                                                                    'radius': radius
-                                                                },
-                                                                success: function(request_token_url) {
-                                                                    window.location.replace(request_token_url);
-                                                                }
-                                                            });
+                                                    for (var k in jsonItem) {
+                                                        uri.push(k + "=" + encodeURIComponent(jsonItem[k]));
+                                                    }
+
+                                                    return uri.join('&');
+                                                }
+
+                                                if (div === '#share') {
+                                                    var base_uri;
+                                                    var params;
+
+                                                    if ($(this).hasClass('twitter_share')) {
+                                                        //base_uri = 'http://twitter.com/share?'
+                                                        base_uri = 'http://twitter.com/intent/tweet?';
+
+                                                        params = {
+                                                            'text': message
+                                                        };
+
                                                     }
                                                     else if ($(this).hasClass('facebook_share')) {
-                                                        var stringify = function(jsonItem) {
-                                                            var uri = ["http://www.facebook.com/dialog/feed?app_id=181984455187210"];
+                                                        base_uri = "http://www.facebook.com/dialog/feed?";
 
-                                                            for (var k in jsonItem) {
-                                                                uri.push(k + "=" + encodeURIComponent(jsonItem[k]));
-                                                            }
-
-                                                            return uri.join('&');
-                                                        }
-
-                                                        var params = {
+                                                        params = {
                                                             'app_id': 181984455187210,
                                                             'redirect_uri': "http://127.0.0.1:8080",
                                                             'message': message,
@@ -141,9 +140,8 @@ function draw_daisy(petals, sex, name) {
                                                             'picture': "http://fbrell.com/f8.jpg",
                                                             'name': "Loves me, Loves me Not"
                                                         };
-
-                                                        window.location.replace(stringify(params));
                                                     }
+                                                    window.location.replace(stringify(base_uri, params));
                                               }
                                               else {
                                                     window.location.reload();
