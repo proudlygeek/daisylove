@@ -102,7 +102,7 @@ function draw_daisy(petals, sex, name) {
                                         'translation': 0 + ", " + (-h / 2 - radius - 80)
                                 }, 2000, 'elastic', function() {
                                     $(div).fadeIn(500).each(function() {
-                                        var message = 'I\'ve just discovered that ' + name + ' Loves me on http://proudlygeek.github.com/daisylove/';
+                                        var message = 'I\'ve just discovered that ' + name + ' Loves me on http://proudlygeek.github.com/daisylove/ :)';
                                         $(this).find('p').click(function() {
                                                 var stringify = function(baseUri, jsonItem) {
                                                     var uri = [baseUri];
