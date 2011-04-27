@@ -102,7 +102,7 @@ function draw_daisy(petals, sex, name) {
                                         'translation': 0 + ", " + (-h / 2 - radius - 80)
                                 }, 2000, 'elastic', function() {
                                     $(div).fadeIn(500).each(function() {
-                                        var message = 'I\'ve just discovered that ' + name + ' Loves me on http://daisy.no.de';
+                                        var message = 'I\'ve just discovered that ' + name + ' Loves me on http://proudlygeek.github.com/daisylove/';
                                         $(this).find('p').click(function() {
                                                 var stringify = function(baseUri, jsonItem) {
                                                     var uri = [baseUri];
@@ -134,10 +134,10 @@ function draw_daisy(petals, sex, name) {
                                                             'app_id': 181984455187210,
                                                             'redirect_uri': "http://127.0.0.1:8080",
                                                             'message': message,
-                                                            'caption': "What's this?",
+                                                            'caption': "A simple (but effective) love test",
                                                             'link': "http://127.0.0.1:8080",
-                                                            'description': "A small, quick romantic game. Share your love on Facebook!",
-                                                            'picture': "http://fbrell.com/f8.jpg",
+                                                            'description': "Share the love of your life on Facebook!",
+                                                            'picture': "http://i.imgur.com/NkXUS.png",
                                                             'name': "Loves me, Loves me Not"
                                                         };
                                                     }
