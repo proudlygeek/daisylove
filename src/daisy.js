@@ -138,7 +138,7 @@ function draw_daisy(petals, sex, name) {
                                                             'description': "Share the love of your life on Facebook!",
                                                             'picture': "http://i.imgur.com/NkXUS.png",
                                                             'name': "Loves me, Loves me Not",
-                                                            'redirect_uri': "http://proudlygeek.github.com/daisylove/"
+                                                            'redirect_uri': "http://www.facebook.com/"
                                                         };
                                                     }
                                                     window.location.replace(stringify(base_uri, params));
