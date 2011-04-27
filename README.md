@@ -21,7 +21,7 @@ How?
 Why?
 ----
 
-Actually It was just an exercise to test the [Raphael.js][2] library which turned into a little game. Hope you'll enjoy it.
+Actually It was just an exercise to test the [Raphael.js][2] library which has turned into a little game. Hope you'll enjoy it.
 
 [1]: http://en.wikipedia.org/wiki/He_Loves_Me..._He_Loves_Me_Not
 [2]: http://raphaeljs.com/
