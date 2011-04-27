@@ -24,11 +24,11 @@
 
 #canvas_container {
     position: relative;
-    //border: 1px solid black;
 }
 
 body {
     font: 12px "FontinSansRegular", Arial, sans-serif;
+    letter-spacing: 0;
     color: #777;
     background-color: #CCDDEE;
 }
@@ -86,7 +86,7 @@ body {
     width: 190px;
     bottom: 100px;
     left: 50%;
-    margin-left: -78px;
+    margin-left: -95px;
 }
 
 .button p {
@@ -130,6 +130,6 @@ body {
 }
 
 #share {
-  position: absolute
+  position: absolute;
   display: none;
 }

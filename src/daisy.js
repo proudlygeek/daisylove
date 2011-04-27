@@ -17,7 +17,7 @@ function draw_daisy(petals, sex, name) {
 
     var labels = [' Loves You Not :(', ' Loves You :)'];
 
-    var paper = Raphael(document.getElementById('canvas_container'), w, h);
+    var paper = Raphael(document.getElementById('canvas_container'), w - 15 , h - 20);
 
     var start_value = Math.round(Math.random());
 
